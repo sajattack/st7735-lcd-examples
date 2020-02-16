@@ -1,0 +1,15 @@
+[workspace]
+
+members = [
+    "metro-m4-examples",
+    "blue-pill-examples",
+]
+
+
+[profile.dev]
+debug = true
+
+[profile.release]
+debug = true
+lto = true
+opt-level = "s"
