@@ -22,7 +22,8 @@ Usage examples for the st7735-lcd Rust crate
 | DC         | D0                 |
 | CS         | GND                |
 | BLK        | Not connected      |
-![mosi/sck diagram](https://cdn-learn.adafruit.com/assets/assets/000/069/241/medium640/adafruit_products_Grand_Central_SPI_Header_Pinout.jpg?1547248943)
+
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/069/241/medium640/adafruit_products_Grand_Central_SPI_Header_Pinout.jpg?1547248943" width="200"/>
 
 ### Blue Pill
 | ST7735 Pin | Blue Pill Pin |
