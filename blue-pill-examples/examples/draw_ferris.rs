@@ -55,7 +55,7 @@ fn main() -> ! {
             polarity: Polarity::IdleLow,
             phase: Phase::CaptureOnFirstTransition,
         },
-        8.mhz(),
+        16.mhz(),
         clocks,
         &mut rcc.apb2,
     );
