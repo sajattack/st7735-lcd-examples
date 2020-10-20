@@ -9,6 +9,9 @@ Usage examples for the st7735-lcd Rust crate
 ### STM32F103 Blue Pill
 `cargo build --release --examples --target=thumbv7m-none-eabi`
 
+### Nucleo F411RE
+`cargo build --release --examples --target=thumbv7m-none-eabihf`
+
 ## Wiring
 
 ### Metro M4
@@ -36,3 +39,15 @@ Usage examples for the st7735-lcd Rust crate
 | DC         | B0            |
 | CS         | G             |
 | BLK        | Not connected |
+
+### Nucleo F411RE
+| ST7735 Pin | Nucleo F411RE Pin |
+|------------|-------------------|
+| GND        | GND               |
+| VCC        | 5V                |
+| SCL/SCK    | SCK/D13           |
+| SDA/MOSI   | PWM/MOSI/D11      |
+| RES/RST    | A1                |
+| DC         | A0                |
+| CS         | GND               |
+| BLK        | Not connected     |
