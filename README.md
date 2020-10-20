@@ -7,7 +7,7 @@ Usage examples for the st7735-lcd Rust crate
 
 ```sh
 cd metro-m4-examples
-cargo build --release --examples --target=thumbv7em-none-eabihf`
+cargo build --release --examples --target=thumbv7em-none-eabihf
 ```
 
 ### STM32F103 Blue Pill
@@ -19,7 +19,7 @@ cargo build --release --examples --target=thumbv7m-none-eabi
 ### Nucleo F411RE
 ```sh
 cd nucleo-411re-examples
-cargo build --release --examples --target=thumbv7em-none-eabihf`
+cargo build --release --examples --target=thumbv7em-none-eabihf
 ```
 
 ## Wiring
