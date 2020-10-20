@@ -3,6 +3,7 @@
 members = [
     "metro-m4-examples",
     "blue-pill-examples",
+    "nucleo-f411re-examples",
 ]
 
 

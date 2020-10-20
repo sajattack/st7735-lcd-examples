@@ -1,0 +1,19 @@
+[package]
+name = "nucleo-f411re-examples"
+version = "0.1.0"
+authors = ["Amaury ABRIAL aka Yruama_Lairba <Yruama_Lairba@hotmail.com>"]
+edition = "2018"
+
+[dev-dependencies]
+stm32f4xx-hal = { version = "0.8", features = ["rt", "stm32f411" ] } 
+panic-semihosting = "0.5"
+st7735-lcd = "0.7"
+embedded-graphics = "0.6"
+cortex-m = "0.6"
+cortex-m-rt = "0.6"
+
+# this lets you use `cargo fix`!
+[lib]
+test = false
+bench = false
+
