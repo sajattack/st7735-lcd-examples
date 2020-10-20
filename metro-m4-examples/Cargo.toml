@@ -5,7 +5,7 @@ authors = ["Paul Sajna <sajattack@gmail.com>"]
 edition = "2018"
 
 [dev-dependencies]
-metro_m4 = "0.5"
+metro_m4 = "0.6"
 panic-halt = "0.2"
 st7735-lcd = "0.7"
 embedded-graphics = "0.6"

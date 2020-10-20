@@ -11,9 +11,7 @@ extern crate metro_m4 as hal;
 
 use embedded_graphics::image::{Image, ImageRaw, ImageRawLE};
 use embedded_graphics::prelude::*;
-use embedded_graphics::primitives::rectangle::Rectangle;
 use embedded_graphics::pixelcolor::Rgb565;
-use embedded_graphics::style::PrimitiveStyleBuilder;
 
 use hal::spi_master;
 use hal::prelude::*;
@@ -55,10 +53,8 @@ fn main() -> ! {
     let mut disp = st7735_lcd::ST7735::new(spi, dc, rst, false, true, 160, 80);
     disp.init(&mut delay).unwrap();
     disp.set_orientation(&Orientation::Landscape).unwrap();
-    let style = PrimitiveStyleBuilder::new().fill_color(Rgb565::BLACK).build();
-    let black_backdrop = Rectangle::new(Point::new(0, 0), Point::new(160, 80)).into_styled(style);
     disp.set_offset(0, 25);
-    black_backdrop.draw(&mut disp).unwrap();
+    disp.clear(Rgb565::BLACK).unwrap();
     
     // draw ferris
     let image_raw: ImageRawLE<Rgb565> = ImageRaw::new(include_bytes!("../../assets/ferris.raw"), 86, 64);

@@ -11,8 +11,6 @@ use cortex_m_rt::{entry, exception};
 use embedded_graphics::image::{Image, ImageRaw, ImageRawLE};
 use embedded_graphics::pixelcolor::Rgb565;
 use embedded_graphics::prelude::*;
-use embedded_graphics::primitives::rectangle::Rectangle;
-use embedded_graphics::style::PrimitiveStyleBuilder;
 
 use hal::delay::Delay;
 use hal::prelude::*;
@@ -55,11 +53,7 @@ fn main() -> ! {
 
     disp.init(&mut delay).unwrap();
     disp.set_orientation(&Orientation::Landscape).unwrap();
-    let style = PrimitiveStyleBuilder::new()
-        .fill_color(Rgb565::BLACK)
-        .build();
-    let black_backdrop = Rectangle::new(Point::new(0, 0), Point::new(160, 128)).into_styled(style);
-    black_backdrop.draw(&mut disp).unwrap();
+    disp.clear(Rgb565::BLACK);
 
     disp.set_offset(0, 25);
 
