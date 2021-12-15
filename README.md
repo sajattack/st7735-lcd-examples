@@ -26,6 +26,7 @@ cargo build --release --examples --target=thumbv7em-none-eabihf
 ```sh
 cd rp2040-examples
 cargo build --release --example draw_ferris
+```
 
 ## Wiring
 
