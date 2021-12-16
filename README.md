@@ -22,6 +22,12 @@ cd nucleo-411re-examples
 cargo build --release --examples --target=thumbv7em-none-eabihf
 ```
 
+### Raspberry Pi Pico
+```sh
+cd rp2040-examples
+cargo build --release --example draw_ferris
+```
+
 ## Wiring
 
 ### Metro M4
@@ -61,3 +67,15 @@ cargo build --release --examples --target=thumbv7em-none-eabihf
 | DC         | A0                |
 | CS         | GND               |
 | BLK        | Not connected     |
+
+### Raspberry Pi Pico
+| ST7735 Pin | Raspberry Pi Pico Pin |
+|------------|-----------------------|
+| GND        | GND                   |
+| VCC        | 5V                    |
+| SCL/SCK    | gpio6                 |
+| SDA/MOSI   | gpio7                 |
+| RES/RST    | gpio14                |
+| DC         | gpio13                |
+| CS         | GND                   |
+| LED        | gpio12                |
