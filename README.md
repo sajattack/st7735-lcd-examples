@@ -69,13 +69,13 @@ cargo build --release --example draw_ferris
 | BLK        | Not connected     |
 
 ### Raspberry Pi Pico
-| ST7735 Pin | Nucleo F411RE Pin |
-|------------|-------------------|
-| GND        | GND               |
-| VCC        | 5V                |
-| SCL/SCK    | gpio6             |
-| SDA/MOSI   | gpio7             |
-| RES/RST    | gpio14            |
-| DC         | gpio13            |
-| CS         | GND               |
-| LED        | gpio12            |
+| ST7735 Pin | Raspberry Pi Pico Pin |
+|------------|-----------------------|
+| GND        | GND                   |
+| VCC        | 5V                    |
+| SCL/SCK    | gpio6                 |
+| SDA/MOSI   | gpio7                 |
+| RES/RST    | gpio14                |
+| DC         | gpio13                |
+| CS         | GND                   |
+| LED        | gpio12                |
