@@ -28,6 +28,12 @@ cd rp2040-examples
 cargo build --release --example draw_ferris
 ```
 
+### M5Stamp C3U Mate
+```sh
+cd esp32c3-examples
+cargo build --release --example draw_ferris
+```
+
 ## Wiring
 
 ### Metro M4
@@ -79,3 +85,15 @@ cargo build --release --example draw_ferris
 | DC         | gpio13                |
 | CS         | GND                   |
 | LED        | gpio12                |
+
+### M5Stamp C3U
+| ST7735R Pin | M5Stamp C3U Pin |
+|------------|-----------------------|
+| GND        | GND                   |
+| 3V3        | 3V3                   |
+| SCL/SCK    | gpio8                 |
+| SDA/MOSI/SI| gpio10                |
+| RES/RST    | gpio3                 |
+| DC         | gpio4                 |
+| TCS/CS     | GND                   |
+| LED        | Not connected         |
