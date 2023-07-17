@@ -87,7 +87,7 @@ cargo build --release --example draw_ferris
 | LED        | gpio12                |
 
 ### M5Stamp C3U
-| ST7735R Pin | Raspberry Pi Pico Pin |
+| ST7735R Pin | M5Stamp C3U Pin |
 |------------|-----------------------|
 | GND        | GND                   |
 | 3V3        | 3V3                   |

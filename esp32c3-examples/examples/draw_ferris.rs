@@ -28,8 +28,7 @@ fn main() -> Result<()> {
     let sdi = Option::<Gpio0>::None;
     let cs = Option::<Gpio0>::None;
     let driver_config = Default::default();
-    let hertz = Hertz(30_000_000);
-    let spi_config = spi::SpiConfig::new().baudrate(hertz);
+    let spi_config = spi::SpiConfig::new().baudrate(30.MHz().into());
     let spi =
         spi::SpiDeviceDriver::new_single(spi, sclk, sdo, sdi, cs, &driver_config, &spi_config)?;
 
@@ -52,7 +51,8 @@ fn main() -> Result<()> {
         .unwrap();
     display.set_offset(0, 25);
 
-    let image_raw: ImageRawLE<Rgb565> = ImageRaw::new(include_bytes!("../../assets/ferris.raw"), 86);
+    let image_raw: ImageRawLE<Rgb565> =
+        ImageRaw::new(include_bytes!("../../assets/ferris.raw"), 86);
     let image = Image::new(&image_raw, Point::new(26, 8));
     image.draw(&mut display).unwrap();
 
