@@ -4,8 +4,9 @@ version = "0.1.0"
 authors = ["Paul Sajna <sajattack@gmail.com>"]
 edition = "2018"
 
-[dev-dependencies]
-metro_m4 = "0.6"
-panic-halt = "0.2"
-st7735-lcd = "0.7"
-embedded-graphics = "0.6"
+[dependencies]
+metro_m4 = { version = "0.12.0", features=["rt"] }
+st7735-lcd = "0.9"
+embedded-graphics = "0.8"
+rtt-target = { version = "0.3.0", features = ["cortex-m"] }
+panic-rtt-target = { version = "0.1.2", features=["cortex-m"] }
