@@ -47,7 +47,7 @@ fn main() -> ! {
 
     // SPI1
     let sck = gpioa.pa5;
-    let miso = gpioa.pa6;
+    let miso = gpioa.pa6; // Not used
     let mosi = gpioa.pa7;
 
     let cs = gpioa.pa4.into_push_pull_output();
