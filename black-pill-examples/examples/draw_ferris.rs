@@ -83,10 +83,10 @@ fn main() -> ! {
             IMAGE_WIDTH as u32,
         );
 
+    disp.set_offset(xpos, ypos);
+    image.draw(&mut disp).unwrap();
+
     loop {
-        disp.set_offset(xpos, ypos);
-        image.draw(&mut disp).unwrap();
-        delay.delay_ms(1000u32);
-        continue;
+        cortex_m::asm::wfi(); // sleep infinitely
     }
 }
