@@ -1,0 +1,14 @@
+[package]
+name = "blue-pill-examples"
+version = "0.1.0"
+authors = ["Paul Sajna <sajattack@gmail.com>"]
+edition = "2018"
+
+[dev-dependencies]
+stm32f4xx-hal = { version = "0.20", features = ["stm32f411"] }
+st7735-lcd = "0.10"
+embedded-graphics = "0.8"
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-hal-bus = "0.1"
+panic-halt = "0.2.0"
