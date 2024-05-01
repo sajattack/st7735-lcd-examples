@@ -54,8 +54,11 @@ fn main() -> ! {
 
     let dc = pins.d0.into_push_pull_output();
     let rst = pins.d1.into_push_pull_output();
+    let cs = pins.d2.into_push_pull_output();
 
-    let mut disp = st7735_lcd::ST7735::new(spi, dc, rst, false, true, 160, 80);
+    let spi_device = embedded_hal_bus::spi::ExclusiveDevice::new_no_delay(spi, cs).unwrap();
+    let mut disp = st7735_lcd::ST7735::new(spi_device, dc, rst, false, true, 160, 128);
+
     disp.init(&mut delay).unwrap();
     disp.set_orientation(&Orientation::Landscape).unwrap();
     disp.set_offset(1, 26);

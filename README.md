@@ -68,7 +68,7 @@ cargo build --release --example draw_ferris
 | SDA/MOSI   | MOSI (see picture) |
 | RES/RST    | D1                 |
 | DC         | D0                 |
-| CS         | GND                |
+| CS         | D2 or GND          |
 | BLK        | Not connected      |
 
 <img src="https://cdn-learn.adafruit.com/assets/assets/000/069/241/medium640/adafruit_products_Grand_Central_SPI_Header_Pinout.jpg?1547248943" width="200"/>
